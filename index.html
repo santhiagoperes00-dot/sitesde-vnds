@@ -35,7 +35,7 @@
         /* Header / Hero Section */
         header {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 60px 20px 30px;
             background: radial-gradient(circle at top, #2d0b4e 0%, #0d0d0d 60%);
         }
 
@@ -58,15 +58,92 @@
             margin: 0 auto;
         }
 
+        /* Seção de Galeria de Prints / Demonstração */
+        .gallery-section {
+            padding: 30px 20px 40px;
+            text-align: center;
+        }
+
+        .gallery-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: #eee;
+        }
+
+        .gallery-title span {
+            color: var(--roxo-neon);
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            position: relative;
+            width: 310px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 2px solid #2a2a2a;
+            background: var(--preto-card);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: var(--roxo-neon);
+            box-shadow: 0 10px 25px rgba(177, 92, 255, 0.3);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-card:hover img {
+            opacity: 0.9;
+        }
+
+        .gallery-tag {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(4px);
+            border: 1px solid var(--roxo-principal);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .gallery-tag i {
+            color: var(--roxo-neon);
+        }
+
         /* Seção de Planos */
         .plans-section {
-            padding: 50px 20px;
+            padding: 40px 20px 60px;
             text-align: center;
         }
 
         .section-title {
             font-size: 2.2rem;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             font-weight: 800;
             text-transform: uppercase;
         }
@@ -91,7 +168,7 @@
             border: 1px solid #2a2a2a;
             border-radius: 16px;
             padding: 35px 25px;
-            width: 320px; /* Levemente mais largo para acomodar o texto */
+            width: 320px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
@@ -171,7 +248,7 @@
             list-style: none;
             text-align: left;
             margin-bottom: 25px;
-            flex-grow: 1; /* Faz o botão de compra ficar sempre no final */
+            flex-grow: 1;
         }
 
         .plan-features li {
@@ -355,6 +432,7 @@
         /* Responsividade */
         @media (max-width: 768px) {
             .logo-text { font-size: 2.5rem; }
+            .gallery-card { width: 100%; max-width: 340px; }
             .plan-card { width: 100%; max-width: 340px; }
             .plan-card.destaque { transform: scale(1); }
             .plan-card.destaque:hover { transform: translateY(-10px); }
@@ -365,10 +443,29 @@
 
     <header>
         <h1 class="logo-text">Pato Team</h1>
-        <p class="subtitle">O APK MOD mais seguro do cenário. Escolha seu acesso, amasse os butecos nas partidas e suba de patente tropa.</p>
+        <p class="subtitle">O APK MOD mais seguro do cenário. Escolha seu acesso, amasse nas partidas e suba de patente tropa.</p>
     </header>
 
     <main>
+        <!-- Prints em Destaque do Mod -->
+        <section class="gallery-section">
+            <h3 class="gallery-title"><i class="fas fa-camera"></i> Prints do <span>APK em Jogo</span></h3>
+            <div class="gallery-container">
+                <div class="gallery-card">
+                    <img src="print1.jpg" alt="Pato Team - Seleção de Modos">
+                    <div class="gallery-tag"><i class="fas fa-gamepad"></i> In-Game VIP</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="print2.jpg" alt="Pato Team - Mestre de Honra">
+                    <div class="gallery-tag"><i class="fas fa-trophy"></i> Patente Mestre</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="print3.jpg" alt="Pato Team - Elite 100 estrelas">
+                    <div class="gallery-tag"><i class="fas fa-fire"></i> Patente Elite</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Planos -->
         <section class="plans-section">
             <h2 class="section-title">Escolha seu <span>Acesso</span></h2>
