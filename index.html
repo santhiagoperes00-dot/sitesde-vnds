@@ -429,6 +429,43 @@
             font-weight: 500;
         }
 
+        /* Abas de produtos */
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 25px 20px 10px;
+        }
+
+        .tab-button {
+            padding: 13px 28px;
+            border: 1px solid rgba(138, 43, 226, 0.45);
+            border-radius: 12px;
+            background: #141414;
+            color: #ddd;
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover,
+        .tab-button.active {
+            color: #fff;
+            border-color: var(--roxo-neon);
+            background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo-principal));
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.25);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .logo-text { font-size: 2.5rem; }
@@ -447,6 +484,16 @@
     </header>
 
     <main>
+        <div class="tabs-nav" role="tablist" aria-label="Categorias de produtos">
+            <button type="button" class="tab-button active" id="btn-apk" role="tab" aria-selected="true" aria-controls="tab-apk" onclick="openTab('apk')">
+                <i class="fas fa-mobile-alt"></i> APK Mod
+            </button>
+            <button type="button" class="tab-button" id="btn-regedit" role="tab" aria-selected="false" aria-controls="tab-regedit" onclick="openTab('regedit')">
+                <i class="fas fa-sliders-h"></i> Regedit
+            </button>
+        </div>
+
+        <div id="tab-apk" class="tab-content active" role="tabpanel" aria-labelledby="btn-apk">
         <!-- Prints em Destaque do Mod -->
         <section class="gallery-section">
             <h3 class="gallery-title"><i class="fas fa-camera"></i> Prints do <span>APK em Jogo</span></h3>
@@ -568,6 +615,86 @@
             </div>
         </section>
 
+        </div>
+
+        <!-- Aba Regedit -->
+        <div id="tab-regedit" class="tab-content" role="tabpanel" aria-labelledby="btn-regedit">
+            <section class="plans-section">
+                <h2 class="section-title">Escolha seu <span>plano Regedit</span></h2>
+                <div class="plans-container">
+                    <!-- Regedit: 1 Dia -->
+                    <div class="plan-card">
+                        <div class="plan-duration">1 Dia</div>
+                        <div class="plan-subtitle-mod">Pato Team REGEDIT</div>
+                        <div class="plan-price"><span>R$</span> 8,90</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> <div>Acesso ao Regedit por 1 dia.</div></li>
+                        </ul>
+                        <a href="https://go.tribopay.com.br/5ss5entjtf?affh=1eewabi59c" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                            <div class="buy-btn-title"><i class="fas fa-shopping-cart"></i> Comprar Agora</div>
+                            <div class="buy-btn-sub"><i class="fas fa-bolt"></i> acesso por 1 dia</div>
+                        </a>
+                    </div>
+
+                    <!-- Regedit: 3 Dias -->
+                    <div class="plan-card">
+                        <div class="plan-duration">3 Dias</div>
+                        <div class="plan-subtitle-mod">Pato Team REGEDIT</div>
+                        <div class="plan-price"><span>R$</span> 10,90</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> <div>Acesso ao Regedit por 3 dias.</div></li>
+                        </ul>
+                        <a href="https://go.tribopay.com.br/ct7lwbt3jd?affh=3yqjsgmjlv" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                            <div class="buy-btn-title"><i class="fas fa-shopping-cart"></i> Comprar Agora</div>
+                            <div class="buy-btn-sub"><i class="fas fa-bolt"></i> acesso por 3 dias</div>
+                        </a>
+                    </div>
+
+                    <!-- Regedit: 7 Dias -->
+                    <div class="plan-card">
+                        <div class="plan-duration">7 Dias</div>
+                        <div class="plan-subtitle-mod">Pato Team REGEDIT</div>
+                        <div class="plan-price"><span>R$</span> 14,90</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> <div>Acesso ao Regedit por 7 dias.</div></li>
+                        </ul>
+                        <a href="https://go.tribopay.com.br/n46bsqpprf?affh=frjfnliqgj" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                            <div class="buy-btn-title"><i class="fas fa-shopping-cart"></i> Comprar Agora</div>
+                            <div class="buy-btn-sub"><i class="fas fa-bolt"></i> acesso por 7 dias</div>
+                        </a>
+                    </div>
+
+                    <!-- Regedit: 15 Dias -->
+                    <div class="plan-card">
+                        <div class="plan-duration">15 Dias</div>
+                        <div class="plan-subtitle-mod">Pato Team REGEDIT</div>
+                        <div class="plan-price"><span>R$</span> 29,90</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> <div>Acesso ao Regedit por 15 dias.</div></li>
+                        </ul>
+                        <a href="https://go.tribopay.com.br/c7ci9tuj6p?affh=mv9xsfl832" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                            <div class="buy-btn-title"><i class="fas fa-shopping-cart"></i> Comprar Agora</div>
+                            <div class="buy-btn-sub"><i class="fas fa-bolt"></i> acesso por 15 dias</div>
+                        </a>
+                    </div>
+
+                    <!-- Regedit: 30 Dias -->
+                    <div class="plan-card destaque">
+                        <div class="plan-duration">30 Dias</div>
+                        <div class="plan-subtitle-mod">Pato Team REGEDIT</div>
+                        <div class="plan-price"><span>R$</span> 39,90</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> <div>Acesso ao Regedit por 30 dias.</div></li>
+                        </ul>
+                        <a href="https://go.tribopay.com.br/bsqnzpy9kg?affh=yseo3deytc" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                            <div class="buy-btn-title"><i class="fas fa-shopping-cart"></i> Comprar Agora</div>
+                            <div class="buy-btn-sub"><i class="fas fa-bolt"></i> acesso por 30 dias</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
         <!-- Suporte Telegram -->
         <section class="support-section">
             <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">Precisa de <span>Ajuda?</span></h2>
@@ -589,6 +716,29 @@
     <footer>
         <p>&copy; 2026 edson shop. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function openTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabButtons = document.querySelectorAll('.tab-button');
+
+            tabContents.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+            tabButtons.forEach(function (button) {
+                button.classList.remove('active');
+                button.setAttribute('aria-selected', 'false');
+            });
+
+            const selectedTab = document.getElementById('tab-' + tabName);
+            const selectedButton = document.getElementById('btn-' + tabName);
+            if (selectedTab && selectedButton) {
+                selectedTab.classList.add('active');
+                selectedButton.classList.add('active');
+                selectedButton.setAttribute('aria-selected', 'true');
+            }
+        }
+    </script>
 
 </body>
 </html>
